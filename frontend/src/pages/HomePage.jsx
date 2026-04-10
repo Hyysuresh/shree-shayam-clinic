@@ -151,22 +151,39 @@ export function HomePage() {
                 <span>Cosmetic solutions</span>
               </div>
             </div>
+            <div className="hero-signature-wrap">
+              <span className="hero-signature">Dr. Shree Ram Sahay</span>
+              <span className="hero-signature-note">Crafted with clinical precision and personal care</span>
+            </div>
           </div>
-          <div className="hero-panel glass-card">
-            <div className="panel-chip">Featured Care</div>
-            <h3>Complete Smile Transformation</h3>
-            <p>
-              Cosmetic dentistry, implants, aligners, and preventive care
-              designed with a premium clinical journey.
-            </p>
-            <div className="floating-stats">
-              <div>
-                <span>Same-day consults</span>
-                <strong>Available</strong>
+          <div className="hero-visual">
+            <div className="hero-wireframe" aria-hidden="true" />
+            <div className="hero-smile-silhouette" aria-hidden="true" />
+            <div className="hero-lotus-mark" aria-hidden="true" />
+            <div className="hero-panel glass-card">
+              <div className="smile-frame">
+                <div className="smile-glow" />
+                <div className="smile-photo">
+                  <div className="smile-highlight" />
+                </div>
               </div>
-              <div>
-                <span>Booking workflow</span>
-                <strong>Instant request</strong>
+              <div className="hero-panel-overlay">
+                <div className="panel-chip">Featured Care</div>
+                <h3>Complete Smile Transformation</h3>
+                <p>
+                  Cosmetic dentistry, implants, aligners, and preventive care
+                  designed with a premium clinical journey.
+                </p>
+                <div className="floating-stats">
+                  <div>
+                    <span>Same-day consults</span>
+                    <strong>Available</strong>
+                  </div>
+                  <div>
+                    <span>Booking workflow</span>
+                    <strong>Instant request</strong>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
