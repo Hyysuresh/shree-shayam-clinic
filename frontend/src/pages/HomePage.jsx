@@ -209,6 +209,10 @@ export function HomePage() {
                   </div>
                 </div>
               </div>
+              <div className="hero-medallion" aria-hidden="true">
+                <span>Excellence</span>
+                <strong>Certified</strong>
+              </div>
             </div>
           </div>
         </SectionReveal>

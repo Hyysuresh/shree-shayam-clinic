@@ -160,8 +160,8 @@ a {
   min-height: calc(100vh - 5rem);
   display: grid;
   align-items: center;
-  gap: 2rem;
-  grid-template-columns: 1.08fr 0.92fr;
+  gap: 1.4rem;
+  grid-template-columns: 1.02fr 0.98fr;
 }
 
 .hero-copy {
@@ -171,13 +171,15 @@ a {
 
 .hero-copy h2 {
   margin: 0.7rem 0 1.15rem;
-  max-width: 12ch;
+  max-width: 10.5ch;
   font-family: "Playfair Display", serif;
-  font-size: clamp(3.7rem, 8vw, 6.6rem);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
+  font-size: clamp(4rem, 8.3vw, 6.9rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
   text-wrap: balance;
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.22);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12),
+    0 4px 18px rgba(0, 0, 0, 0.28);
 }
 
 .hero-copy p,
@@ -188,8 +190,8 @@ a {
 }
 
 .hero-copy > p {
-  max-width: 39rem;
-  font-size: 1.05rem;
+  max-width: 36rem;
+  font-size: 1rem;
 }
 
 .eyebrow,
@@ -208,11 +210,15 @@ a {
   backdrop-filter: blur(10px);
 }
 
+.hero .eyebrow {
+  margin-bottom: 0.1rem;
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 .btn {
@@ -283,7 +289,7 @@ a {
 
 .hero-visual {
   position: relative;
-  min-height: 44rem;
+  min-height: 40rem;
   display: grid;
   align-items: center;
 }
@@ -296,11 +302,11 @@ a {
 }
 
 .hero-wireframe {
-  top: 0.5rem;
-  left: -1rem;
-  width: 25rem;
-  height: 31rem;
-  opacity: 0.28;
+  top: -0.2rem;
+  left: -1.8rem;
+  width: 28rem;
+  height: 33rem;
+  opacity: 0.22;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 360'%3E%3Cg fill='none' stroke='%23e6d6b7' stroke-opacity='0.35' stroke-width='1.1'%3E%3Cpath d='M140 12c72 0 118 52 118 112 0 47-22 75-40 100-11 15-20 31-23 53-6 38-31 64-55 64s-49-26-55-64c-3-22-12-38-23-53-18-25-40-53-40-100C22 64 68 12 140 12Z'/%3E%3Cellipse cx='140' cy='112' rx='104' ry='88'/%3E%3Cellipse cx='140' cy='116' rx='78' ry='130'/%3E%3Cpath d='M52 70c23 20 57 32 88 32s65-12 88-32'/%3E%3Cpath d='M38 110c29 22 64 34 102 34s73-12 102-34'/%3E%3Cpath d='M34 156c32 20 67 30 106 30s74-10 106-30'/%3E%3Cpath d='M42 204c28 14 61 22 98 22s70-8 98-22'/%3E%3Cpath d='M62 252c20 9 46 14 78 14s58-5 78-14'/%3E%3Cpath d='M92 18c-9 34-12 66-12 98 0 82 25 161 60 225'/%3E%3Cpath d='M188 18c9 34 12 66 12 98 0 82-25 161-60 225'/%3E%3Cpath d='M140 12v329'/%3E%3Cpath d='M63 41c28 26 50 94 50 141 0 73-18 118-43 150'/%3E%3Cpath d='M217 41c-28 26-50 94-50 141 0 73 18 118 43 150'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
@@ -308,10 +314,10 @@ a {
 }
 
 .hero-smile-silhouette {
-  right: 2rem;
-  top: 3.5rem;
-  width: 14rem;
-  height: 14rem;
+  right: 4rem;
+  top: 3.8rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   background:
     radial-gradient(circle at 34% 44%, rgba(255, 255, 255, 0.32), transparent 16%),
@@ -322,11 +328,11 @@ a {
 }
 
 .hero-lotus-mark {
-  left: 4.2rem;
-  bottom: 4rem;
-  width: 10rem;
-  height: 10rem;
-  opacity: 0.45;
+  left: 4.6rem;
+  bottom: 3.8rem;
+  width: 11rem;
+  height: 11rem;
+  opacity: 0.5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23d8b27a' stroke-opacity='0.68' stroke-width='2'%3E%3Cpath d='M100 146c-15-26-13-53 0-83 13 30 15 57 0 83Z'/%3E%3Cpath d='M100 146c-24-23-34-47-31-81 28 11 44 31 31 81Z'/%3E%3Cpath d='M100 146c24-23 34-47 31-81-28 11-44 31-31 81Z'/%3E%3Cpath d='M100 141c-32-9-52-28-63-58 28-2 49 8 63 58Z'/%3E%3Cpath d='M100 141c32-9 52-28 63-58-28-2-49 8-63 58Z'/%3E%3Cpath d='M100 82v82'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
@@ -334,20 +340,22 @@ a {
 
 .hero-panel {
   position: relative;
-  min-height: 40rem;
-  max-width: 34rem;
+  min-height: 25.5rem;
+  max-width: 38rem;
+  width: 100%;
   margin-left: auto;
-  padding: 1.35rem;
+  padding: 1rem;
   animation: floatPanel 7s ease-in-out infinite;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), transparent 28%),
-    linear-gradient(145deg, rgba(15, 29, 24, 0.58), rgba(10, 22, 18, 0.38));
+    linear-gradient(145deg, rgba(20, 38, 32, 0.54), rgba(10, 22, 18, 0.32));
+  border-radius: 2rem;
 }
 
 .smile-frame {
   position: absolute;
-  inset: 1.1rem;
-  border-radius: 2rem;
+  inset: 1rem;
+  border-radius: 1.85rem;
   overflow: hidden;
   border: 1px solid rgba(255, 245, 230, 0.16);
   background:
@@ -372,41 +380,42 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.06);
-  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.03);
+  filter: saturate(1.02) contrast(1.02);
 }
 
 .smile-highlight {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.1) 38%, transparent 54%),
-    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.22), transparent 18%);
+    linear-gradient(90deg, rgba(16, 33, 27, 0.16), transparent 28%, transparent 72%, rgba(16, 33, 27, 0.22)),
+    linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.08) 38%, transparent 54%),
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.18), transparent 18%);
 }
 
 .hero-panel-overlay {
   position: absolute;
-  top: 2rem;
-  right: 1.7rem;
-  width: min(100%, 14rem);
-  padding: 1.4rem;
+  top: 1.8rem;
+  right: -2rem;
+  width: min(100%, 14.2rem);
+  padding: 1.35rem;
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 245, 230, 0.16);
-  background: rgba(42, 37, 30, 0.36);
+  background: rgba(61, 54, 44, 0.38);
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
 .hero-panel h3 {
   margin: 0.95rem 0 0.7rem;
-  font-size: 2rem;
+  font-size: 2.1rem;
   line-height: 1.05;
 }
 
 .floating-stats {
   display: grid;
   gap: 0.95rem;
-  margin-top: 1.5rem;
+  margin-top: 1.35rem;
 }
 
 .floating-stats div,
@@ -431,15 +440,16 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 2.1rem;
+  margin-top: 2rem;
 }
 
 .hero-highlights div {
-  min-height: 7rem;
+  min-height: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
+  border-radius: 0;
 }
 
 .hero-highlights strong {
@@ -450,7 +460,52 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin-top: 1.5rem;
+  margin-top: 1.15rem;
+}
+
+.hero-medallion {
+  position: absolute;
+  left: -1.25rem;
+  bottom: -1rem;
+  width: 5.9rem;
+  height: 5.9rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.85), rgba(243, 223, 192, 0.9) 35%, rgba(195, 160, 104, 0.95) 70%, rgba(132, 100, 56, 0.95));
+  color: #253025;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.26);
+  border: 4px solid rgba(255, 244, 223, 0.65);
+  z-index: 3;
+}
+
+.hero-medallion::before {
+  content: "";
+  position: absolute;
+  inset: 0.28rem;
+  border-radius: 50%;
+  border: 1px dashed rgba(80, 63, 31, 0.4);
+}
+
+.hero-medallion span,
+.hero-medallion strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.hero-medallion span {
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-medallion strong {
+  font-size: 0.68rem;
+  margin-top: 0.18rem;
 }
 
 .hero-signature {
@@ -791,7 +846,7 @@ textarea:focus {
   }
 
   .hero-visual {
-    min-height: 38rem;
+    min-height: 33rem;
   }
 
   .hero-panel {
@@ -842,12 +897,12 @@ textarea:focus {
   }
 
   .hero-panel {
-    min-height: 34rem;
+    min-height: 27rem;
     max-width: 100%;
   }
 
   .hero-panel-overlay {
-    right: 1rem;
+    right: 0.5rem;
     left: auto;
     width: min(15rem, calc(100% - 2rem));
   }
@@ -855,6 +910,11 @@ textarea:focus {
   .hero-wireframe {
     width: 20rem;
     left: 0;
+  }
+
+  .hero-medallion {
+    left: 0.75rem;
+    bottom: -0.75rem;
   }
 }
 
@@ -881,12 +941,12 @@ textarea:focus {
   }
 
   .hero-visual {
-    min-height: 31rem;
+    min-height: 24rem;
   }
 
   .hero-panel-overlay {
     position: absolute;
-    inset: auto 0.9rem 0.9rem 0.9rem;
+    inset: auto 0.85rem 0.85rem 0.85rem;
     width: auto;
   }
 
@@ -903,6 +963,13 @@ textarea:focus {
 
   .hero-signature {
     font-size: 2.2rem;
+  }
+
+  .hero-medallion {
+    width: 4.7rem;
+    height: 4.7rem;
+    left: 0.8rem;
+    bottom: -0.4rem;
   }
 
   .doctor-photo,
