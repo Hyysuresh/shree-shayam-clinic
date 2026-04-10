@@ -2,6 +2,12 @@ import { useMemo, useState } from "react";
 import axios from "axios";
 import { Toast } from "../components/Toast";
 import { SectionReveal } from "../components/SectionReveal";
+import image1 from "../assets/image1.png";
+import image2 from "../assets/image2.png";
+import image3 from "../assets/image3.png";
+import image4 from "../assets/image4.png";
+import image5 from "../assets/image5.png";
+import image6 from "../assets/image6.png";
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api"
@@ -42,6 +48,25 @@ const testimonials = [
   {
     name: "Neha Bansal",
     text: "Very modern setup, warm team, and beautiful results with my smile makeover. Highly recommended."
+  }
+];
+
+const gallery = [
+  {
+    src: image1,
+    alt: "Dental treatment in progress with clinic staff supporting a patient"
+  },
+  {
+    src: image2,
+    alt: "Dental consultation using a tooth model at a clinic desk"
+  },
+  {
+    src: image3,
+    alt: "Dentist and assistant standing in a bright clinic"
+  },
+  {
+    src: image4,
+    alt: "Dentist consulting a patient in a treatment room"
   }
 ];
 
@@ -163,9 +188,8 @@ export function HomePage() {
             <div className="hero-panel glass-card">
               <div className="smile-frame">
                 <div className="smile-glow" />
-                <div className="smile-photo">
-                  <div className="smile-highlight" />
-                </div>
+                <img className="smile-photo" src={image6} alt="Close-up of a bright natural smile" />
+                <div className="smile-highlight" />
               </div>
               <div className="hero-panel-overlay">
                 <div className="panel-chip">Featured Care</div>
@@ -205,7 +229,7 @@ export function HomePage() {
         </SectionReveal>
 
         <SectionReveal id="about" className="content-section dual-panel">
-          <div className="glass-card">
+          <div className="glass-card about-story">
             <div className="section-heading left">
               <span>About</span>
               <h3>Patient-first dentistry with modern aesthetics</h3>
@@ -220,6 +244,10 @@ export function HomePage() {
               long-term oral wellness, whether you need a routine check-up or a
               complete cosmetic transformation.
             </p>
+            <div className="about-photo-strip">
+              <img src={image2} alt="Consultation with a dental model and treatment planning" />
+              <img src={image4} alt="Dentist discussing treatment with a patient in a modern clinic" />
+            </div>
           </div>
           <div className="glass-card metrics-card">
             <div>
@@ -239,7 +267,7 @@ export function HomePage() {
 
         <SectionReveal id="doctor" className="content-section doctor-section">
           <div className="doctor-card glass-card">
-            <div className="doctor-avatar">DR</div>
+            <img className="doctor-photo" src={image5} alt="Doctor standing confidently in the dental clinic" />
             <div>
               <div className="section-heading left">
                 <span>Doctor Profile</span>
@@ -255,6 +283,20 @@ export function HomePage() {
                 are tailored to each patient's goals and oral health needs.
               </p>
             </div>
+          </div>
+        </SectionReveal>
+
+        <SectionReveal className="content-section experience-grid">
+          <div className="section-heading">
+            <span>Clinic Experience</span>
+            <h3>Inside the care journey</h3>
+          </div>
+          <div className="experience-collage">
+            {gallery.map((item, index) => (
+              <figure className={`glass-card experience-card experience-card-${index + 1}`} key={item.alt}>
+                <img src={item.src} alt={item.alt} />
+              </figure>
+            ))}
           </div>
         </SectionReveal>
 
@@ -281,6 +323,9 @@ export function HomePage() {
               Submit your request and our team will review and confirm your
               appointment shortly.
             </p>
+            <div className="booking-side-photo glass-card">
+              <img src={image3} alt="Dental team ready to welcome patients in the clinic" />
+            </div>
           </div>
           <form className="glass-card booking-form" onSubmit={handleSubmit}>
             <div className="input-grid">

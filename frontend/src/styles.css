@@ -368,43 +368,12 @@ a {
 .smile-photo {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 51% 56%, rgba(255, 255, 255, 0.9), transparent 15%),
-    radial-gradient(circle at 42% 44%, rgba(255, 221, 209, 0.28), transparent 28%),
-    radial-gradient(circle at 64% 40%, rgba(185, 118, 101, 0.42), transparent 34%),
-    radial-gradient(circle at 58% 70%, rgba(235, 170, 158, 0.25), transparent 27%),
-    linear-gradient(110deg, rgba(117, 61, 48, 0.35) 4%, rgba(234, 181, 173, 0.62) 28%, rgba(252, 236, 225, 0.78) 44%, rgba(194, 114, 101, 0.48) 71%, rgba(93, 43, 33, 0.28) 100%);
-  transform: scale(1.08);
-  filter: saturate(1.15) blur(0.2px);
-}
-
-.smile-photo::before {
-  content: "";
-  position: absolute;
-  inset: 20% 14% 23% 14%;
-  border-radius: 45% 45% 42% 42% / 34% 34% 54% 54%;
-  background:
-    radial-gradient(circle at 50% 58%, rgba(255, 255, 255, 0.98), transparent 24%),
-    linear-gradient(180deg, rgba(112, 50, 49, 0.58), rgba(248, 176, 179, 0.12) 34%, rgba(255, 255, 255, 0.95) 48%, rgba(255, 255, 255, 0.98) 61%, rgba(174, 80, 88, 0.22) 76%, rgba(92, 32, 37, 0.4));
-  box-shadow:
-    inset 0 -10px 18px rgba(117, 28, 42, 0.16),
-    inset 0 10px 18px rgba(126, 41, 59, 0.2),
-    0 0 30px rgba(255, 255, 255, 0.08);
-}
-
-.smile-photo::after {
-  content: "";
-  position: absolute;
-  left: 16%;
-  right: 16%;
-  bottom: 18%;
-  height: 34%;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.92), transparent 24%),
-    linear-gradient(180deg, rgba(133, 52, 63, 0.3), rgba(250, 212, 214, 0.18) 38%, rgba(255, 255, 255, 0.05));
-  filter: blur(7px);
-  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.06);
+  filter: saturate(1.04) contrast(1.02);
 }
 
 .smile-highlight {
@@ -567,9 +536,79 @@ a {
 
 .doctor-card {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(15rem, 20rem) 1fr;
   gap: 1.5rem;
   align-items: start;
+}
+
+.doctor-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 24rem;
+  object-fit: cover;
+  border-radius: 1.55rem;
+  border: 1px solid rgba(255, 245, 230, 0.12);
+}
+
+.about-story {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-photo-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+.about-photo-strip img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 245, 230, 0.12);
+}
+
+.experience-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-collage {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 18rem 18rem;
+}
+
+.experience-card {
+  padding: 0.85rem;
+}
+
+.experience-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.35rem;
+  display: block;
+}
+
+.experience-card-1 {
+  grid-row: span 2;
+}
+
+.booking-side-photo {
+  margin-top: 1.4rem;
+  padding: 0.8rem;
+}
+
+.booking-side-photo img {
+  width: 100%;
+  height: 19rem;
+  object-fit: cover;
+  border-radius: 1.4rem;
+  display: block;
 }
 
 .booking-layout {
@@ -789,6 +828,19 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .about-photo-strip,
+  .experience-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-collage {
+    grid-template-rows: auto;
+  }
+
+  .experience-card-1 {
+    grid-row: span 1;
+  }
+
   .hero-panel {
     min-height: 34rem;
     max-width: 100%;
@@ -851,5 +903,13 @@ textarea:focus {
 
   .hero-signature {
     font-size: 2.2rem;
+  }
+
+  .doctor-photo,
+  .about-photo-strip img,
+  .booking-side-photo img,
+  .experience-card img {
+    height: auto;
+    min-height: 14rem;
   }
 }
